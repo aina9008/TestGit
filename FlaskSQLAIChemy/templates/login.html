@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+<form name="loginAction" method="post">
+<label style="float: left">User Name: <input type="text" name="username"></label>
+<label style="float: left">Password: <input type="password" name="password"></label>
+<input style="float: left" type="submit" value="Submit">
+{% for message in get_flashed_messages() %}
+<label>{{ message }}</label>
+{% endfor %}
+</form>
+</body>
+</html>
